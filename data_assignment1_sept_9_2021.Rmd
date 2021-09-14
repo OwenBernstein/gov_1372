@@ -1,6 +1,6 @@
 ---
 title: 'Data Exploration: Making Decisions'
-author: "Your name here"
+author: "Owen Bernstein"
 date: "September 9, 2021"
 output:
   pdf_document: default
