@@ -129,19 +129,19 @@ player_data_long <- bind_rows(player1_data, player2_data)
 
 q1_points <- player_data_long %>% 
   group_by(player) %>% 
-  summarize(points = sum(score))
+  summarize(points = sum(score)) %>% 
+  arrange(desc(points))
+
+q1_wins
+q1_points
 
 ```
 
-To rank the strategies based on the number of wins, think about making use of the `winner` variable in the `pda_data` data frame.
+In my tournament, backstabber and handshaker were tied with 4 wins each. The alternator strategy and the punisher strategy each had 2 wins and 1 win respectively, and the tit for tat strategy and the appeaser strategy had no wins. 
+Interestingly, the punisher strategy, which had just 1 win finished with the most points, and the handshaker strategy which tied for the most wins finished with the fewest points. Backstabber and tit for tat both finished with over 1200 points while appeaser and alternator came in 4th and 5th respectively. 
 
-be nice but you have to defend yourself
+The three strategies that finished with the most points all followed some of the principles that Axelrod identified as successful strategies. Namely, each of these strategies had mechanisms to cooperate over the long run with strategies that also cooperated over the long run, and had mechanisms to defect if their opponent defected. In other words, each of these strategies were "nice" but had "retaliation" mechanisms. On the other hand, the worst performing strategies, specifically handshaker and alternator, lacked these same mechanisms. The handshaker strategy could perform well in a specific scenario, but outside of that lacked niceness, forgiveness, or retaliation mechanisms. Finally, the alternator strategy lacked any mechansism to respons to the opponent at all. 
 
-## Question 2
-
-**Make a plot like the one below that displays how your winning strategy (according to total points) fared against the strategies it played against. Using `player_data_long` is probably easiest, but complete this question however makes most sense to you. Comment on what you find.**
-
-![Here is an example of a plot you might make.](./rmd_photos/question2.png)
 
 ## Question 3: Data Science Question
 
@@ -173,8 +173,7 @@ player_data_long %>%
 
 ```
 
+Based on the chart above, it appears that the backstabber and punisher strategies are the most successful. Each of these strategies scored more points on average than they had scored against them. Additionally, each of these strategies performed extremely well (~300 points) in 4 out of their 5 matches. 
 
+The titfortat strategy and the appeaser strategy both performed decently with average scores around 200. The two worst performing strategies were handshaker and alternator each of which scored well below 200 points on average. 
 
-## Question 4
-
-**What is the main difference between the game you played here and the tournament Axelrod implemented? How do you think this difference might matter?**
