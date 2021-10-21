@@ -18,6 +18,7 @@ library(ggplot2)
 library(patchwork)
 library(stargazer)
 library(ggthemes)
+library(gmodels)
 ```
 
 In this Data Exploration assignment, you will work with data that has been modified from the Barnhart et al. (2020) article. You will investigate whether certain types of countries are more likely to initiate conflicts with other countries. Note that you are only working with the data used to generate the *Monadic Findings* of the paper - that is, you will examine whether democracies initiate fewer conflicts than autocracies.
