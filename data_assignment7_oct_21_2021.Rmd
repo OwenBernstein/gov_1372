@@ -16,6 +16,7 @@ library(tidyverse)
 library(estimatr)
 library(haven)
 library(stargazer)
+library(ggthemes)
 ```
 
 In this Data Exploration assignment we will explore Reny and Newman's (2021) finding that opinions towards the police and about the level of discrimination faced by Black Americans were impacted by the spread of protests in the wake of the killing of George Floyd. You will recreate, present, and assess those claims as well as creating your own regression models to test which attitudes change and when.
